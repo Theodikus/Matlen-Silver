@@ -1,9 +1,9 @@
 
 
 function pascalsTriangle(rows){
-	const triangle = [];
+	let triangle = [];
 
-	for(var i = 0; i < rows; i++){
+	for(let i = 0; i < rows; i++){
 		// if there is a row above inside the triangle, calculate each new cell 
 		if(triangle[i -1]){
 			const targetRow = triangle[i-1];
@@ -13,7 +13,7 @@ function pascalsTriangle(rows){
 			// using the target row for calculating the new values, 
 			// reach to both the -1 index and 1 index past the row length 'i',
 			// adding 2 at a time as you go across
-			for (var j = -1; j < i; j++){
+			for (let j = -1; j < i; j++){
 				const n = targetRow[j] || 0;
 				const m = targetRow[j + 1] || 0;
 
